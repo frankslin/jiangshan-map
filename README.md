@@ -187,6 +187,8 @@ hit.region.properties.title;     // 南直隶
 hit.prefecture.properties.title; // 应天府 (a GeoJSON Feature: L.geoJSON(hit.prefecture))
 ```
 
+To cross-check the prefecture polygons against the [CBDB](https://cbdb.hsites.harvard.edu/) `ADDRESSES` table (names, seat positions and parent circuits, 600–1911 CE), run the export first, then `python3 scripts/align_cbdb.py --db <cbdb.sqlite>`; see the script header for setup. CBDB data is CC BY-NC-SA 4.0 and is not included in this repository.
+
 After exporting, serve the repository (`python3 -m http.server 8000`) and open `http://localhost:8000/geojson/demo.html` for a Leaflet example: drag the year slider, click the map, or open `demo.html?year=1415&lon=118.78&lat=32.06` to load, highlight and zoom automatically. The data is GPL-3.0, and historical borders are schematic approximations.
 
 ---
