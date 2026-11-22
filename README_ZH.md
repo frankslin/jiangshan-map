@@ -273,6 +273,8 @@ hit.region.properties.title;     // 南直隶
 hit.prefecture;                  // 默认为 null；加 --with-prefectures 导出时为 应天府
 ```
 
+如需用 [CBDB](https://cbdb.hsites.harvard.edu/) 的 `ADDRESSES` 表核对州郡多边形（名称、治所位置与所属路/道/省，600–1911 年），先用 `--with-prefectures` 运行导出，再运行 `python3 scripts/align_cbdb.py --db <cbdb.sqlite>`，准备步骤见脚本开头说明。CBDB 数据采用 CC BY-NC-SA 4.0 协议，不随本仓库分发。
+
 导出后启动本地服务（`python3 -m http.server 8000`），打开 `http://localhost:8000/geojson/demo.html` 即可查看 Leaflet 示例：拖动年份滑块、点击地图，或打开 `demo.html?year=1415&lon=118.78&lat=32.06` 自动加载、高亮并缩放到该处。历史疆域为示意性近似，并非测绘边界。数据采用 GPL-3.0 协议，郡 / 州 / 府级边界除外，详见[数据来源与授权](#数据来源与授权)。
 
 ---

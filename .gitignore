@@ -11,3 +11,7 @@ _snap_skill_tmp_*.html
 
 # Generated static SEO topic pages (built by scripts/build_seo_topics.js)
 /topics/*.html
+
+# Local CBDB inputs and outputs for scripts/align_cbdb.py (CC BY-NC-SA 4.0, not redistributed)
+cbdb_align/
+*.db
